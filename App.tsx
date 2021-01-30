@@ -28,7 +28,7 @@ export default class App extends React.Component<{}, state> {
       <SafeAreaProvider>
         <View>
           <Header backgroundColor='#00BABE' centerComponent={{
-            text: 'Pocket Dictionary',
+            text: 'Text to Speech App',
             style: {
               color: '#000',
               fontSize: 30,
