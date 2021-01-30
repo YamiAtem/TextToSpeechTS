@@ -9,7 +9,19 @@ import {
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Header } from 'react-native-elements';
 
-export default class App extends React.Component {
+type state = {
+  text: string
+}
+
+export default class App extends React.Component<{}, state> {
+  constructor(props: state) {
+    super(props);
+
+    this.state = {
+      text: ''
+    }
+  }
+
   render() {
     return (
       <SafeAreaProvider>
@@ -26,6 +38,12 @@ export default class App extends React.Component {
           <TextInput
             style={styles.inputBox}
             placeholder="Word Here"
+            onChangeText={text => {
+              this.setState({
+                text: text
+              });
+            }}
+            value={this.state.text}
           />
 
           <TouchableOpacity style={styles.searchButton}>
