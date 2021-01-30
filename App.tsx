@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Header } from 'react-native-elements';
+import * as Speech from 'expo-speech';
 
 type state = {
   text: string
@@ -46,7 +47,11 @@ export default class App extends React.Component<{}, state> {
             value={this.state.text}
           />
 
-          <TouchableOpacity style={styles.searchButton}>
+          <TouchableOpacity style={styles.searchButton} onPress={() => {
+            var text = this.state.text;
+
+            Speech.speak(text);
+          }}>
             <Text style={styles.searchText}>Press to hear Speech</Text>
           </TouchableOpacity>
         </View>
