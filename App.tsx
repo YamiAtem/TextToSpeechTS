@@ -14,9 +14,13 @@ export default class App extends React.Component {
     return (
       <SafeAreaProvider>
         <View>
-          <Header backgroundColor='#008103' centerComponent={{
+          <Header backgroundColor='#00BABE' centerComponent={{
             text: 'Pocket Dictionary',
-            style: { color: '#fff', fontSize: 20 },
+            style: {
+              color: '#000',
+              fontSize: 30,
+              fontWeight: 'bold'
+            },
           }} />
 
           <TextInput
