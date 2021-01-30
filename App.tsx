@@ -49,8 +49,9 @@ const styles = StyleSheet.create({
     height: 55,
     alignSelf: 'center',
     margin: 20,
-    borderWidth: 5,
-    borderRadius: 20,
+    backgroundColor: '#00BABE',
+    paddingTop: 5,
+    borderRadius: 25,
   },
   searchText: {
     textAlign: 'center',
