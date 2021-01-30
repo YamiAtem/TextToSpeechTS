@@ -23,6 +23,10 @@ export default class App extends React.Component {
             style={styles.inputBox}
             placeholder="Word Here"
           />
+
+          <TouchableOpacity style={styles.searchButton}>
+            <Text style={styles.searchText}>Press to hear Speech</Text>
+          </TouchableOpacity>
         </View>
       </SafeAreaProvider>
 
@@ -39,5 +43,18 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     borderWidth: 4,
     outline: 'none',
+  },
+  searchButton: {
+    width: '25%',
+    height: 55,
+    alignSelf: 'center',
+    margin: 20,
+    borderWidth: 5,
+    borderRadius: 20,
+  },
+  searchText: {
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: 'bold',
   },
 });
